@@ -1,0 +1,34 @@
+[2022-12-17T14:14:34.101+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: superforecast_v1.proceso manual__2022-12-17T14:14:31.169218+00:00 [queued]>
+[2022-12-17T14:14:34.110+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: superforecast_v1.proceso manual__2022-12-17T14:14:31.169218+00:00 [queued]>
+[2022-12-17T14:14:34.110+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17T14:14:34.110+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 2
+[2022-12-17T14:14:34.111+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17T14:14:34.124+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): proceso> on 2022-12-17 14:14:31.169218+00:00
+[2022-12-17T14:14:34.129+0000] {standard_task_runner.py:55} INFO - Started process 24455 to run task
+[2022-12-17T14:14:34.133+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'superforecast_v1', 'proceso', 'manual__2022-12-17T14:14:31.169218+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/predsuper_dag.py', '--cfg-path', '/tmp/tmp1xe09op0']
+[2022-12-17T14:14:34.134+0000] {standard_task_runner.py:83} INFO - Job 91: Subtask proceso
+[2022-12-17T14:14:34.198+0000] {task_command.py:376} INFO - Running <TaskInstance: superforecast_v1.proceso manual__2022-12-17T14:14:31.169218+00:00 [running]> on host 26302dc28230
+[2022-12-17T14:14:34.422+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=doloresferrando@gmail.com
+AIRFLOW_CTX_DAG_OWNER=super
+AIRFLOW_CTX_DAG_ID=superforecast_v1
+AIRFLOW_CTX_TASK_ID=proceso
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-17T14:14:31.169218+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-17T14:14:31.169218+00:00
+[2022-12-17T14:14:34.899+0000] {forecaster.py:927} INFO - Disabling daily seasonality. Run prophet with daily_seasonality=True to override this.
+[2022-12-17T14:14:34.916+0000] {filesystem.py:123} DEBUG - input tempfile: /tmp/tmpobl30e2y/tnwsvzrb.json
+[2022-12-17T14:14:34.923+0000] {filesystem.py:123} DEBUG - input tempfile: /tmp/tmpobl30e2y/8iczoy2i.json
+[2022-12-17T14:14:34.924+0000] {model.py:1567} DEBUG - idx 0
+[2022-12-17T14:14:34.924+0000] {model.py:1570} DEBUG - running CmdStan, num_threads: None
+[2022-12-17T14:14:34.924+0000] {model.py:1580} DEBUG - CmdStan args: ['/home/***/.local/lib/python3.7/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=22463', 'data', 'file=/tmp/tmpobl30e2y/tnwsvzrb.json', 'init=/tmp/tmpobl30e2y/8iczoy2i.json', 'output', 'file=/tmp/tmpobl30e2y/prophet_modelwr1gb7j8/prophet_model-20221217141434.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+[2022-12-17T14:14:34.924+0000] {logging_mixin.py:120} WARNING - 14:14:34 - cmdstanpy - INFO - Chain [1] start processing
+[2022-12-17T14:14:34.924+0000] {model.py:1583} INFO - Chain [1] start processing
+[2022-12-17T14:14:35.492+0000] {logging_mixin.py:120} WARNING - 14:14:35 - cmdstanpy - INFO - Chain [1] done processing
+[2022-12-17T14:14:35.491+0000] {model.py:1640} INFO - Chain [1] done processing
+[2022-12-17T14:14:35.905+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-17T14:14:35.917+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=superforecast_v1, task_id=proceso, execution_date=20221217T141431, start_date=20221217T141434, end_date=20221217T141435
+[2022-12-17T14:14:35.952+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2022-12-17T14:14:35.975+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

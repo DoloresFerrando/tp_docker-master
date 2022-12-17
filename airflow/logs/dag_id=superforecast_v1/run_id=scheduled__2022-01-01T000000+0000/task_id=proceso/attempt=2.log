@@ -1,0 +1,51 @@
+[2022-12-16T12:50:47.447+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: superforecast_v1.proceso scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-12-16T12:50:47.471+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: superforecast_v1.proceso scheduled__2022-01-01T00:00:00+00:00 [queued]>
+[2022-12-16T12:50:47.471+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-16T12:50:47.472+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 2
+[2022-12-16T12:50:47.472+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-16T12:50:47.505+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): proceso> on 2022-01-01 00:00:00+00:00
+[2022-12-16T12:50:47.513+0000] {standard_task_runner.py:55} INFO - Started process 605 to run task
+[2022-12-16T12:50:47.522+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'superforecast_v1', 'proceso', 'scheduled__2022-01-01T00:00:00+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/predsuper_dag.py', '--cfg-path', '/tmp/tmp2t4lml3p']
+[2022-12-16T12:50:47.526+0000] {standard_task_runner.py:83} INFO - Job 70: Subtask proceso
+[2022-12-16T12:50:47.673+0000] {task_command.py:376} INFO - Running <TaskInstance: superforecast_v1.proceso scheduled__2022-01-01T00:00:00+00:00 [running]> on host 26302dc28230
+[2022-12-16T12:50:48.229+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=doloresferrando@gmail.com
+AIRFLOW_CTX_DAG_OWNER=super
+AIRFLOW_CTX_DAG_ID=superforecast_v1
+AIRFLOW_CTX_TASK_ID=proceso
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-01-01T00:00:00+00:00
+[2022-12-16T12:50:48.626+0000] {forecaster.py:927} INFO - Disabling daily seasonality. Run prophet with daily_seasonality=True to override this.
+[2022-12-16T12:50:48.686+0000] {filesystem.py:123} DEBUG - input tempfile: /tmp/tmpjbfwwktf/nxq88exd.json
+[2022-12-16T12:50:48.700+0000] {filesystem.py:123} DEBUG - input tempfile: /tmp/tmpjbfwwktf/el_yjx_z.json
+[2022-12-16T12:50:48.704+0000] {model.py:1567} DEBUG - idx 0
+[2022-12-16T12:50:48.705+0000] {model.py:1570} DEBUG - running CmdStan, num_threads: None
+[2022-12-16T12:50:48.705+0000] {model.py:1580} DEBUG - CmdStan args: ['/home/***/.local/lib/python3.7/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=52612', 'data', 'file=/tmp/tmpjbfwwktf/nxq88exd.json', 'init=/tmp/tmpjbfwwktf/el_yjx_z.json', 'output', 'file=/tmp/tmpjbfwwktf/prophet_modelaw6arssg/prophet_model-20221216125048.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+[2022-12-16T12:50:48.705+0000] {logging_mixin.py:120} WARNING - 12:50:48 - cmdstanpy - INFO - Chain [1] start processing
+[2022-12-16T12:50:48.705+0000] {model.py:1583} INFO - Chain [1] start processing
+[2022-12-16T12:50:50.926+0000] {logging_mixin.py:120} WARNING - 12:50:50 - cmdstanpy - INFO - Chain [1] done processing
+[2022-12-16T12:50:50.925+0000] {model.py:1640} INFO - Chain [1] done processing
+[2022-12-16T12:50:54.070+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/super.py", line 28, in proceso
+    fcst[['ds', 'yhat']].merge(df,on='ds',how='left').to_csv("localpath/historico.csv")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 3482, in to_csv
+    storage_options=storage_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/formats/format.py", line 1105, in to_csv
+    csv_formatter.save()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/formats/csvs.py", line 243, in save
+    storage_options=self.storage_options,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: 'localpath/historico.csv'
+[2022-12-16T12:50:54.128+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=superforecast_v1, task_id=proceso, execution_date=20220101T000000, start_date=20221216T125047, end_date=20221216T125054
+[2022-12-16T12:50:54.210+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 70 for task proceso ([Errno 2] No such file or directory: 'localpath/historico.csv'; 605)
+[2022-12-16T12:50:54.296+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2022-12-16T12:50:54.407+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

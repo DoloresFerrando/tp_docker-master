@@ -1,0 +1,44 @@
+[2022-12-17T13:46:54.787+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: superforecast_v1.proceso manual__2022-12-17T13:44:47.389880+00:00 [queued]>
+[2022-12-17T13:46:54.796+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: superforecast_v1.proceso manual__2022-12-17T13:44:47.389880+00:00 [queued]>
+[2022-12-17T13:46:54.796+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17T13:46:54.796+0000] {taskinstance.py:1363} INFO - Starting attempt 2 of 2
+[2022-12-17T13:46:54.796+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-17T13:46:54.811+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): proceso> on 2022-12-17 13:44:47.389880+00:00
+[2022-12-17T13:46:54.816+0000] {standard_task_runner.py:55} INFO - Started process 22705 to run task
+[2022-12-17T13:46:54.820+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'superforecast_v1', 'proceso', 'manual__2022-12-17T13:44:47.389880+00:00', '--job-id', '87', '--raw', '--subdir', 'DAGS_FOLDER/predsuper_dag.py', '--cfg-path', '/tmp/tmpfy0hep87']
+[2022-12-17T13:46:54.822+0000] {standard_task_runner.py:83} INFO - Job 87: Subtask proceso
+[2022-12-17T13:46:54.887+0000] {task_command.py:376} INFO - Running <TaskInstance: superforecast_v1.proceso manual__2022-12-17T13:44:47.389880+00:00 [running]> on host 26302dc28230
+[2022-12-17T13:46:55.121+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=doloresferrando@gmail.com
+AIRFLOW_CTX_DAG_OWNER=super
+AIRFLOW_CTX_DAG_ID=superforecast_v1
+AIRFLOW_CTX_TASK_ID=proceso
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-17T13:44:47.389880+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-17T13:44:47.389880+00:00
+[2022-12-17T13:46:55.657+0000] {forecaster.py:927} INFO - Disabling daily seasonality. Run prophet with daily_seasonality=True to override this.
+[2022-12-17T13:46:55.699+0000] {filesystem.py:123} DEBUG - input tempfile: /tmp/tmpo0pq6u2_/vn7i4hhq.json
+[2022-12-17T13:46:55.706+0000] {filesystem.py:123} DEBUG - input tempfile: /tmp/tmpo0pq6u2_/82q0m16l.json
+[2022-12-17T13:46:55.707+0000] {model.py:1567} DEBUG - idx 0
+[2022-12-17T13:46:55.707+0000] {model.py:1570} DEBUG - running CmdStan, num_threads: None
+[2022-12-17T13:46:55.707+0000] {model.py:1580} DEBUG - CmdStan args: ['/home/***/.local/lib/python3.7/site-packages/prophet/stan_model/prophet_model.bin', 'random', 'seed=61933', 'data', 'file=/tmp/tmpo0pq6u2_/vn7i4hhq.json', 'init=/tmp/tmpo0pq6u2_/82q0m16l.json', 'output', 'file=/tmp/tmpo0pq6u2_/prophet_modelwmlm2bxy/prophet_model-20221217134655.csv', 'method=optimize', 'algorithm=newton', 'iter=10000']
+[2022-12-17T13:46:55.707+0000] {logging_mixin.py:120} WARNING - 13:46:55 - cmdstanpy - INFO - Chain [1] start processing
+[2022-12-17T13:46:55.707+0000] {model.py:1583} INFO - Chain [1] start processing
+[2022-12-17T13:46:56.408+0000] {logging_mixin.py:120} WARNING - 13:46:56 - cmdstanpy - INFO - Chain [1] done processing
+[2022-12-17T13:46:56.407+0000] {model.py:1640} INFO - Chain [1] done processing
+[2022-12-17T13:46:56.888+0000] {logging_mixin.py:120} INFO - /opt/***
+[2022-12-17T13:46:56.889+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/super.py", line 31, in proceso
+    outputpath = os.path.join(dirpath,'outpt.csv')
+NameError: name 'dirpath' is not defined
+[2022-12-17T13:46:56.897+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=superforecast_v1, task_id=proceso, execution_date=20221217T134447, start_date=20221217T134654, end_date=20221217T134656
+[2022-12-17T13:46:56.911+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 87 for task proceso (name 'dirpath' is not defined; 22705)
+[2022-12-17T13:46:56.959+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2022-12-17T13:46:56.980+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

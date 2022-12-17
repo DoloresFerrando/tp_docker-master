@@ -1,0 +1,1426 @@
+[2022-12-16T00:04:12.241+0000] {processor.py:154} INFO - Started process (PID=32177) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T00:04:12.258+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T00:04:12.305+0000] {logging_mixin.py:120} INFO - [2022-12-16T00:04:12.291+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T00:04:43.900+0000] {logging_mixin.py:120} INFO - [2022-12-16T00:04:43.601+0000] {timeout.py:68} ERROR - Process timed out, PID: 32177
+[2022-12-16T00:04:44.041+0000] {logging_mixin.py:120} INFO - [2022-12-16T00:04:43.915+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 13, in <module>
+    from super import _get_monthly_sales, _calculate_monthly_sales_forecast
+  File "/opt/airflow/dags/super.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/airflow/.local/lib/python3.7/site-packages/matplotlib/__init__.py", line 109, in <module>
+    from . import _api, _version, cbook, docstring, rcsetup
+  File "/home/airflow/.local/lib/python3.7/site-packages/matplotlib/rcsetup.py", line 27, in <module>
+    from matplotlib.colors import Colormap, is_color_like
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/predsuperdag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.4.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.4.2/best-practices.html#reducing-dag-complexity, PID: 32177
+[2022-12-16T00:04:44.068+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T00:04:45.212+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 31.894 seconds
+[2022-12-16T00:06:14.031+0000] {processor.py:154} INFO - Started process (PID=32264) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T00:06:14.062+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T00:06:14.114+0000] {logging_mixin.py:120} INFO - [2022-12-16T00:06:14.112+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T11:59:19.307+0000] {logging_mixin.py:120} INFO - [2022-12-16T11:59:12.562+0000] {timeout.py:68} ERROR - Process timed out, PID: 32264
+[2022-12-16T11:59:19.310+0000] {logging_mixin.py:120} INFO - [2022-12-16T11:59:19.308+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 13, in <module>
+    from super import _get_monthly_sales, _calculate_monthly_sales_forecast
+  File "/opt/airflow/dags/super.py", line 1, in <module>
+    import pandas as pd
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/__init__.py", line 50, in <module>
+    from pandas.core.api import (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/api.py", line 29, in <module>
+    from pandas.core.arrays import Categorical
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/arrays/__init__.py", line 8, in <module>
+    from pandas.core.arrays.datetimes import DatetimeArray
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 857, in get_code
+  File "<frozen importlib._bootstrap_external>", line 525, in _compile_bytecode
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/timeout.py", line 69, in handle_timeout
+    raise AirflowTaskTimeout(self.error_message)
+airflow.exceptions.AirflowTaskTimeout: DagBag import timeout for /opt/airflow/dags/predsuperdag.py after 30.0s.
+Please take a look at these docs to improve your DAG import time:
+* https://airflow.apache.org/docs/apache-airflow/2.4.2/best-practices.html#top-level-python-code
+* https://airflow.apache.org/docs/apache-airflow/2.4.2/best-practices.html#reducing-dag-complexity, PID: 32264
+[2022-12-16T11:59:19.311+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T11:59:20.632+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 42786.649 seconds
+[2022-12-16T11:59:44.390+0000] {processor.py:154} INFO - Started process (PID=32309) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T11:59:44.404+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T11:59:44.405+0000] {logging_mixin.py:120} INFO - [2022-12-16T11:59:44.404+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T11:59:49.005+0000] {logging_mixin.py:120} INFO - [2022-12-16T11:59:48.994+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-t9bwpm8l because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T11:59:51.671+0000] {logging_mixin.py:120} INFO - [2022-12-16T11:59:51.670+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T11:59:56.256+0000] {logging_mixin.py:120} INFO - [2022-12-16T11:59:56.248+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T11:59:56.256+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T11:59:56.301+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 11.929 seconds
+[2022-12-16T12:00:26.755+0000] {processor.py:154} INFO - Started process (PID=32371) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:00:26.755+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:00:26.757+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:00:26.756+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:00:27.630+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:00:27.629+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-c98mjjwz because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:00:28.119+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:00:28.118+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:00:29.369+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:00:29.368+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:00:29.369+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:00:29.387+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.637 seconds
+[2022-12-16T12:00:59.791+0000] {processor.py:154} INFO - Started process (PID=32433) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:00:59.791+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:00:59.792+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:00:59.792+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:01:00.519+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:01:00.519+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-n9arqda3 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:01:00.843+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:01:00.842+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:01:01.929+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:01:01.927+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:01:01.929+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:01:01.946+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.158 seconds
+[2022-12-16T12:01:32.167+0000] {processor.py:154} INFO - Started process (PID=32485) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:01:32.171+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:01:32.172+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:01:32.172+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:01:33.597+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:01:33.597+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-oylcwpg1 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:01:34.239+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:01:34.238+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:01:36.248+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:01:36.247+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:01:36.249+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:01:36.279+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 4.124 seconds
+[2022-12-16T12:02:06.338+0000] {processor.py:154} INFO - Started process (PID=32543) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:02:06.344+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:02:06.345+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:02:06.345+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:02:09.224+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:02:09.223+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ji_rpz9n because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:02:10.705+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:02:10.705+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:02:12.946+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:02:12.945+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:02:12.947+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:02:12.993+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 6.669 seconds
+[2022-12-16T12:02:43.117+0000] {processor.py:154} INFO - Started process (PID=32596) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:02:43.119+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:02:43.121+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:02:43.120+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:02:44.259+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:02:44.259+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-hncb5twv because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:02:45.353+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:02:45.350+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:02:47.256+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:02:47.254+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:02:47.257+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:02:47.292+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 4.180 seconds
+[2022-12-16T12:03:17.600+0000] {processor.py:154} INFO - Started process (PID=32657) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:03:17.610+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:03:17.611+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:03:17.611+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:03:18.731+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:03:18.730+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-v0iuj77f because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:03:19.297+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:03:19.296+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:03:20.829+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:03:20.828+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:03:20.829+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:03:20.853+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 3.257 seconds
+[2022-12-16T12:03:51.192+0000] {processor.py:154} INFO - Started process (PID=32718) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:03:51.193+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:03:51.193+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:03:51.193+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:03:51.809+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:03:51.809+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-js3b_sa0 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:03:52.108+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:03:52.107+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:03:53.087+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:03:53.087+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:03:53.088+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:03:53.106+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.918 seconds
+[2022-12-16T12:04:23.492+0000] {processor.py:154} INFO - Started process (PID=309) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:04:23.493+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:04:23.494+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:04:23.494+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:04:24.476+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:04:24.475+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-vxcmrnur because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:04:24.769+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:04:24.768+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:04:25.778+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:04:25.777+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:04:25.779+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:04:25.799+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.317 seconds
+[2022-12-16T12:04:56.801+0000] {processor.py:154} INFO - Started process (PID=370) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:04:56.801+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:04:56.802+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:04:56.802+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:04:57.654+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:04:57.653+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-zrqfrgp2 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:04:58.034+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:04:58.034+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:04:59.198+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:04:59.197+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:04:59.198+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:04:59.217+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.421 seconds
+[2022-12-16T12:05:29.500+0000] {processor.py:154} INFO - Started process (PID=422) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:05:29.501+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:05:29.502+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:05:29.502+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:05:30.188+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:05:30.188+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-9sme9wsn because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:05:30.520+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:05:30.520+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:05:31.749+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:05:31.748+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:05:31.749+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:05:31.770+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.272 seconds
+[2022-12-16T12:06:02.249+0000] {processor.py:154} INFO - Started process (PID=479) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:06:02.261+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:06:02.262+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:06:02.262+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:06:02.906+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:06:02.905+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-11g460i4 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:06:03.236+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:06:03.236+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:06:04.293+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:06:04.292+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:06:04.294+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:06:04.323+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.079 seconds
+[2022-12-16T12:06:34.579+0000] {processor.py:154} INFO - Started process (PID=540) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:06:34.579+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:06:34.580+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:06:34.580+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:06:35.176+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:06:35.176+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-h37sfk23 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:06:35.481+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:06:35.481+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:06:36.614+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:06:36.613+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:06:36.615+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:06:36.636+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.060 seconds
+[2022-12-16T12:07:06.939+0000] {processor.py:154} INFO - Started process (PID=601) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:07:06.939+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:07:06.940+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:07:06.940+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:07:07.671+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:07:07.671+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-1fxywn37 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:07:08.014+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:07:08.013+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:07:09.377+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:07:09.375+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:07:09.378+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:07:09.404+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.468 seconds
+[2022-12-16T12:07:39.979+0000] {processor.py:154} INFO - Started process (PID=662) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:07:39.980+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:07:39.980+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:07:39.980+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:07:40.507+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:07:40.507+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-2cj_0rlw because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:07:40.782+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:07:40.782+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:07:41.664+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:07:41.663+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:07:41.664+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:07:41.691+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.714 seconds
+[2022-12-16T12:08:11.918+0000] {processor.py:154} INFO - Started process (PID=714) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:08:11.918+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:08:11.919+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:08:11.919+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:08:12.529+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:08:12.529+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-5xhh3t18 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:08:12.866+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:08:12.866+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:08:14.195+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:08:14.194+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:08:14.195+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:08:14.220+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.306 seconds
+[2022-12-16T12:08:44.288+0000] {processor.py:154} INFO - Started process (PID=775) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:08:44.288+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:08:44.289+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:08:44.289+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:08:44.948+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:08:44.948+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-rd7q6fd2 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:08:45.398+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:08:45.398+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:08:46.752+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:08:46.751+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:08:46.753+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:08:46.781+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.498 seconds
+[2022-12-16T12:09:17.313+0000] {processor.py:154} INFO - Started process (PID=836) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:09:17.324+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:09:17.324+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:09:17.324+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:09:17.863+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:09:17.863+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-y1ful1wp because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:09:18.151+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:09:18.151+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:09:19.168+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:09:19.167+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:09:19.169+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:09:19.187+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.877 seconds
+[2022-12-16T12:09:49.710+0000] {processor.py:154} INFO - Started process (PID=897) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:09:49.722+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:09:49.723+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:09:49.722+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:09:50.250+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:09:50.250+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-49zb1cbr because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:09:50.519+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:09:50.519+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:09:51.424+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:09:51.423+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:09:51.424+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:09:51.451+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.746 seconds
+[2022-12-16T12:10:21.703+0000] {processor.py:154} INFO - Started process (PID=958) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:10:21.704+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:10:21.704+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:10:21.704+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:10:22.233+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:10:22.233+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-sg1ok8g5 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:10:22.520+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:10:22.519+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:10:23.412+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:10:23.411+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:10:23.412+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:10:23.430+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.730 seconds
+[2022-12-16T12:10:54.034+0000] {processor.py:154} INFO - Started process (PID=1018) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:10:54.034+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:10:54.035+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:10:54.034+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:10:54.586+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:10:54.586+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-pvdgo0qo because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:10:54.865+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:10:54.865+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:10:55.767+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:10:55.767+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:10:55.768+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:10:55.793+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.763 seconds
+[2022-12-16T12:11:26.256+0000] {processor.py:154} INFO - Started process (PID=1072) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:11:26.267+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:11:26.267+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:11:26.267+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:11:26.813+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:11:26.813+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-6227j5zk because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:11:27.081+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:11:27.081+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:11:28.006+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:11:28.005+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:11:28.006+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:11:28.063+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.810 seconds
+[2022-12-16T12:11:58.454+0000] {processor.py:154} INFO - Started process (PID=1134) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:11:58.455+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:11:58.459+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:11:58.459+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:11:59.011+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:11:59.011+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-d9q_6d5q because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:11:59.295+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:11:59.294+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:12:00.283+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:12:00.282+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:12:00.283+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:12:00.306+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.855 seconds
+[2022-12-16T12:12:30.665+0000] {processor.py:154} INFO - Started process (PID=1195) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:12:30.677+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:12:30.678+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:12:30.678+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:12:31.290+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:12:31.290+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-kq9hzia5 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:12:31.637+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:12:31.637+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:12:32.562+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:12:32.561+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:12:32.562+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:12:32.580+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.918 seconds
+[2022-12-16T12:13:02.657+0000] {processor.py:154} INFO - Started process (PID=1256) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:13:02.657+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:13:02.658+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:13:02.658+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:13:03.188+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:13:03.188+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-28dq8lxt because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:13:03.457+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:13:03.457+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:13:04.359+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:13:04.358+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:13:04.359+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:13:04.377+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.723 seconds
+[2022-12-16T12:13:34.409+0000] {processor.py:154} INFO - Started process (PID=1317) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:13:34.410+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:13:34.411+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:13:34.410+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:13:34.963+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:13:34.963+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-2r801wu1 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:13:35.230+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:13:35.230+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:13:36.112+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:13:36.111+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:13:36.112+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:13:36.129+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.723 seconds
+[2022-12-16T12:14:06.680+0000] {processor.py:154} INFO - Started process (PID=1367) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:14:06.682+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:14:06.683+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:14:06.683+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:14:07.231+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:14:07.231+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-u508xmzt because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:14:07.502+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:14:07.501+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:14:08.416+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:14:08.415+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:14:08.416+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:14:08.432+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.757 seconds
+[2022-12-16T12:14:38.536+0000] {processor.py:154} INFO - Started process (PID=1428) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:14:38.537+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:14:38.537+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:14:38.537+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:14:39.100+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:14:39.100+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-vnbcgk0e because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:14:39.379+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:14:39.379+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:14:40.299+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:14:40.298+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:14:40.299+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:14:40.317+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.783 seconds
+[2022-12-16T12:15:10.925+0000] {processor.py:154} INFO - Started process (PID=1490) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:15:10.926+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:15:10.926+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:15:10.926+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:15:11.529+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:15:11.529+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ilx0wr7k because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:15:11.835+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:15:11.835+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:15:13.018+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:15:13.017+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:15:13.018+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:15:13.046+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.125 seconds
+[2022-12-16T12:15:43.233+0000] {processor.py:154} INFO - Started process (PID=1551) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:15:43.234+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:15:43.235+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:15:43.234+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:15:44.129+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:15:44.129+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-za_dyadd because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:15:44.551+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:15:44.551+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:15:46.043+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:15:46.042+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:15:46.043+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:15:46.073+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.843 seconds
+[2022-12-16T12:16:16.565+0000] {processor.py:154} INFO - Started process (PID=1608) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:16:16.566+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:16:16.569+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:16:16.569+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:16:17.168+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:16:17.167+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-krbrwdsn because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:16:17.471+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:16:17.471+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:16:18.587+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:16:18.586+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:16:18.587+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:16:18.616+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.054 seconds
+[2022-12-16T12:16:48.672+0000] {processor.py:154} INFO - Started process (PID=1660) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:16:48.673+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:16:48.674+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:16:48.674+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:16:49.283+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:16:49.283+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-0erizkew because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:16:49.575+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:16:49.575+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:16:50.785+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:16:50.784+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:16:50.785+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:16:50.803+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.135 seconds
+[2022-12-16T12:17:21.096+0000] {processor.py:154} INFO - Started process (PID=1721) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:17:21.097+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:17:21.097+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:17:21.097+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:17:21.656+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:17:21.656+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-qlmjrb1p because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:17:21.955+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:17:21.955+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:17:22.869+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:17:22.868+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:17:22.869+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:17:22.890+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.796 seconds
+[2022-12-16T12:17:53.022+0000] {processor.py:154} INFO - Started process (PID=1780) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:17:53.025+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:17:53.029+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:17:53.029+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:17:53.880+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:17:53.880+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-0pt8b89c because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:17:54.196+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:17:54.196+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:17:55.236+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:17:55.235+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:17:55.236+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:17:55.254+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.239 seconds
+[2022-12-16T12:18:25.480+0000] {processor.py:154} INFO - Started process (PID=1841) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:18:25.490+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:18:25.491+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:18:25.491+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:18:26.087+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:18:26.087+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-y_x0mltk because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:18:26.372+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:18:26.371+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:18:27.323+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:18:27.322+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:18:27.323+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:18:27.340+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.863 seconds
+[2022-12-16T12:18:57.676+0000] {processor.py:154} INFO - Started process (PID=1901) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:18:57.677+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:18:57.678+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:18:57.677+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:18:58.729+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:18:58.729+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-b6q4htwu because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:18:59.219+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:18:59.219+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:19:00.634+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:19:00.633+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:19:00.635+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:19:00.662+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.991 seconds
+[2022-12-16T12:19:31.381+0000] {processor.py:154} INFO - Started process (PID=1951) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:19:31.382+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:19:31.383+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:19:31.383+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:19:32.228+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:19:32.228+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-p8g0_pqe because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:19:32.588+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:19:32.588+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:19:34.217+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:19:34.216+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:19:34.218+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:19:34.279+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.902 seconds
+[2022-12-16T12:20:04.704+0000] {processor.py:154} INFO - Started process (PID=2012) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:20:04.704+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:20:04.705+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:20:04.705+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:20:05.340+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:20:05.340+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-c18sfd1k because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:20:05.670+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:20:05.670+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:20:06.826+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:20:06.825+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:20:06.826+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:20:06.843+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.143 seconds
+[2022-12-16T12:20:37.770+0000] {processor.py:154} INFO - Started process (PID=2073) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:20:37.781+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:20:37.781+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:20:37.781+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:20:38.346+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:20:38.345+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-qndl_m4q because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:20:38.614+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:20:38.614+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:20:39.591+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:20:39.590+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:20:39.591+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:20:39.619+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.851 seconds
+[2022-12-16T12:21:09.954+0000] {processor.py:154} INFO - Started process (PID=2134) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:21:09.954+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:21:09.955+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:21:09.955+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:21:10.492+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:21:10.492+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-3rrilts9 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:21:10.759+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:21:10.758+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:21:11.644+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:21:11.643+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:21:11.645+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:21:11.663+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.713 seconds
+[2022-12-16T12:21:41.799+0000] {processor.py:154} INFO - Started process (PID=2195) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:21:41.800+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:21:41.800+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:21:41.800+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:21:42.356+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:21:42.355+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-w4dh7ml9 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:21:42.642+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:21:42.642+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:21:43.625+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:21:43.624+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:21:43.626+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:21:43.653+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.857 seconds
+[2022-12-16T12:22:14.042+0000] {processor.py:154} INFO - Started process (PID=2247) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:22:14.043+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:22:14.044+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:22:14.044+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:22:14.606+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:22:14.606+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ouv_7z41 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:22:14.907+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:22:14.906+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:22:15.896+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:22:15.896+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:22:15.897+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:22:15.915+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.877 seconds
+[2022-12-16T12:22:46.425+0000] {processor.py:154} INFO - Started process (PID=2308) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:22:46.425+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:22:46.426+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:22:46.426+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:22:46.965+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:22:46.965+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-4vvpaip8 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:22:47.234+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:22:47.234+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:22:48.135+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:22:48.135+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:22:48.136+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:22:48.164+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.742 seconds
+[2022-12-16T12:23:18.390+0000] {processor.py:154} INFO - Started process (PID=2369) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:23:18.390+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:23:18.391+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:23:18.391+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:23:19.036+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:23:19.036+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-gffiggvk because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:23:19.317+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:23:19.317+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:23:20.215+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:23:20.214+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:23:20.215+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:23:20.244+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.858 seconds
+[2022-12-16T12:23:50.813+0000] {processor.py:154} INFO - Started process (PID=2430) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:23:50.814+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:23:50.815+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:23:50.815+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:23:51.347+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:23:51.347+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-gu_0sbe3 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:23:51.616+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:23:51.615+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:23:52.518+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:23:52.517+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:23:52.518+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:23:52.544+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.734 seconds
+[2022-12-16T12:24:22.922+0000] {processor.py:154} INFO - Started process (PID=2491) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:24:22.922+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:24:22.923+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:24:22.922+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:24:23.449+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:24:23.448+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ew_e4bbh because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:24:23.721+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:24:23.721+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:24:24.686+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:24:24.685+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:24:24.687+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:24:24.704+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.785 seconds
+[2022-12-16T12:24:55.129+0000] {processor.py:154} INFO - Started process (PID=2552) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:24:55.130+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:24:55.130+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:24:55.130+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:24:55.740+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:24:55.739+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-3lxxak88 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:24:56.027+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:24:56.026+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:24:56.918+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:24:56.917+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:24:56.919+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:24:56.946+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.820 seconds
+[2022-12-16T12:25:27.622+0000] {processor.py:154} INFO - Started process (PID=2604) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:25:27.632+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:25:27.634+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:25:27.633+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:25:28.215+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:25:28.215+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-g9xsajpi because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:25:28.508+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:25:28.508+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:25:29.441+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:25:29.440+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:25:29.441+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:25:29.468+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.850 seconds
+[2022-12-16T12:25:59.618+0000] {processor.py:154} INFO - Started process (PID=2665) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:25:59.619+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:25:59.620+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:25:59.620+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:26:00.385+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:26:00.385+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-cmk17njd because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:26:00.799+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:26:00.798+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:26:01.832+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:26:01.830+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:26:01.832+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:26:01.867+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.257 seconds
+[2022-12-16T12:26:32.000+0000] {processor.py:154} INFO - Started process (PID=2726) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:26:32.000+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:26:32.001+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:26:32.001+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:26:32.592+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:26:32.592+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-3jjc_156 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:26:32.892+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:26:32.891+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:26:33.797+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:26:33.797+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:26:33.798+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:26:33.825+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.831 seconds
+[2022-12-16T12:27:03.899+0000] {processor.py:154} INFO - Started process (PID=2787) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:27:03.910+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:27:03.912+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:27:03.912+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:27:04.450+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:27:04.450+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-rrh6l8so because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:27:04.718+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:27:04.718+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:27:05.620+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:27:05.619+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:27:05.620+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:27:05.636+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.741 seconds
+[2022-12-16T12:27:36.221+0000] {processor.py:154} INFO - Started process (PID=2848) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:27:36.231+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:27:36.231+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:27:36.231+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:27:36.838+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:27:36.838+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-3fcay0lg because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:27:37.105+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:27:37.105+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:27:37.988+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:27:37.987+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:27:37.988+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:27:38.015+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.798 seconds
+[2022-12-16T12:28:08.720+0000] {processor.py:154} INFO - Started process (PID=2900) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:28:08.721+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:28:08.721+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:28:08.721+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:28:09.366+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:28:09.366+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-8hfgqnrn because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:28:09.664+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:28:09.664+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:28:10.768+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:28:10.767+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:28:10.769+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:28:10.796+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.081 seconds
+[2022-12-16T12:28:41.278+0000] {processor.py:154} INFO - Started process (PID=2961) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:28:41.279+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:28:41.280+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:28:41.280+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:28:41.807+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:28:41.807+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-bdu81_r8 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:28:42.112+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:28:42.111+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:28:43.056+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:28:43.055+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:28:43.056+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:28:43.086+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.811 seconds
+[2022-12-16T12:29:13.600+0000] {processor.py:154} INFO - Started process (PID=3022) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:29:13.601+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:29:13.602+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:29:13.601+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:29:14.125+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:29:14.125+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-9tfo78vq because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:29:14.400+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:29:14.399+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:29:15.300+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:29:15.299+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:29:15.300+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:29:15.328+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.732 seconds
+[2022-12-16T12:29:45.570+0000] {processor.py:154} INFO - Started process (PID=3083) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:29:45.571+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:29:45.571+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:29:45.571+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:29:46.157+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:29:46.157+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-p3j807a3 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:29:46.430+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:29:46.430+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:29:47.397+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:29:47.396+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:29:47.397+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:29:47.419+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.852 seconds
+[2022-12-16T12:30:17.689+0000] {processor.py:154} INFO - Started process (PID=3144) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:30:17.690+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:30:17.691+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:30:17.691+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:30:18.279+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:30:18.279+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ibt31yuq because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:30:18.609+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:30:18.609+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:30:19.693+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:30:19.692+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:30:19.694+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:30:19.716+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.032 seconds
+[2022-12-16T12:30:50.502+0000] {processor.py:154} INFO - Started process (PID=3206) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:30:50.503+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:30:50.504+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:30:50.504+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:30:51.079+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:30:51.079+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-ghutvigr because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:30:51.364+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:30:51.363+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:30:52.311+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:30:52.311+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:30:52.312+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:30:52.327+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.828 seconds
+[2022-12-16T12:31:23.041+0000] {processor.py:154} INFO - Started process (PID=3258) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:31:23.052+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:31:23.052+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:31:23.052+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:31:23.593+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:31:23.593+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-rmg5f4af because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:31:23.862+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:31:23.861+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:31:24.846+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:31:24.845+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:31:24.846+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:31:24.874+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.839 seconds
+[2022-12-16T12:31:54.964+0000] {processor.py:154} INFO - Started process (PID=3319) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:31:54.965+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:31:54.965+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:31:54.965+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:31:55.526+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:31:55.526+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-2114popo because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:31:55.795+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:31:55.795+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:31:56.703+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:31:56.702+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:31:56.703+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:31:56.720+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.758 seconds
+[2022-12-16T12:32:26.884+0000] {processor.py:154} INFO - Started process (PID=3378) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:32:26.885+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:32:26.885+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:32:26.885+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:32:27.597+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:32:27.596+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-jtq4ezah because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:32:27.970+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:32:27.970+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:32:29.493+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:32:29.492+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:32:29.493+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:32:29.512+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.632 seconds
+[2022-12-16T12:32:59.587+0000] {processor.py:154} INFO - Started process (PID=3435) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:32:59.588+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:32:59.589+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:32:59.589+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:33:00.185+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:33:00.185+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-qq4o587_ because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:33:00.474+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:33:00.474+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:33:01.412+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:33:01.411+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:33:01.412+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:33:01.431+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.848 seconds
+[2022-12-16T12:33:31.648+0000] {processor.py:154} INFO - Started process (PID=3487) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:33:31.648+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:33:31.649+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:33:31.649+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:33:32.197+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:33:32.196+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-jmz94xh5 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:33:32.542+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:33:32.541+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:33:33.756+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:33:33.755+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:33:33.756+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:33:33.777+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.133 seconds
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [2022-12-16T12:45:11.377+0000] {processor.py:154} INFO - Started process (PID=181) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:45:11.378+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:45:11.378+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:45:11.378+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:45:12.204+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:45:12.204+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-dlzf6177 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:45:12.651+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:45:12.650+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:45:14.569+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:45:14.566+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:45:14.569+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:45:14.587+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 3.214 seconds
+[2022-12-16T12:45:44.933+0000] {processor.py:154} INFO - Started process (PID=243) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:45:44.934+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:45:44.934+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:45:44.934+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:45:45.326+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:45:45.326+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-j8x9csfn because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:45:45.586+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:45:45.586+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:45:46.761+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:45:46.760+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:45:46.761+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:45:46.777+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.847 seconds
+[2022-12-16T12:46:17.118+0000] {processor.py:154} INFO - Started process (PID=295) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:46:17.118+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:46:17.119+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:46:17.119+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:46:17.622+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:46:17.622+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-xmat5odl because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:46:17.942+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:46:17.942+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:46:19.082+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:46:19.081+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:46:19.082+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:46:19.108+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.994 seconds
+[2022-12-16T12:47:35.741+0000] {processor.py:154} INFO - Started process (PID=181) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:47:35.742+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:47:35.744+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:47:35.744+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:47:39.239+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:47:39.239+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-9tm_6z6g because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:47:39.813+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:47:39.812+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:47:41.598+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:47:41.597+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:47:41.599+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:47:41.620+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 5.885 seconds
+[2022-12-16T12:48:12.319+0000] {processor.py:154} INFO - Started process (PID=244) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:48:12.319+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:48:12.320+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:48:12.320+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:48:12.891+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:48:12.891+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-8deczrjj because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:48:13.218+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:48:13.218+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:48:14.268+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:48:14.267+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:48:14.268+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:48:14.285+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.969 seconds
+[2022-12-16T12:48:45.229+0000] {processor.py:154} INFO - Started process (PID=362) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:48:45.230+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:48:45.232+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:48:45.232+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:48:50.749+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:48:50.749+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-27k__gop because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:48:51.644+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:48:51.643+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:48:54.352+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:48:54.348+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:48:54.353+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:48:54.387+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 9.169 seconds
+[2022-12-16T12:49:24.514+0000] {processor.py:154} INFO - Started process (PID=425) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:49:24.515+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:49:24.516+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:49:24.515+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:49:25.059+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:49:25.058+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-uytg_xdo because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:49:25.340+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:49:25.340+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:49:26.281+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:49:26.280+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:49:26.281+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:49:26.309+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.798 seconds
+[2022-12-16T12:49:56.770+0000] {processor.py:154} INFO - Started process (PID=486) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:49:56.771+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:49:56.772+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:49:56.772+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:49:57.458+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:49:57.458+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-7eb8_55a because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:49:57.830+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:49:57.830+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:49:59.048+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:49:59.047+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:49:59.048+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:49:59.077+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.313 seconds
+[2022-12-16T12:50:29.430+0000] {processor.py:154} INFO - Started process (PID=541) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:50:29.431+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:50:29.431+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:50:29.431+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:50:29.963+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:50:29.963+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-drl83vyg because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:50:30.307+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:50:30.306+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:50:31.577+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:50:31.575+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:50:31.578+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:50:31.609+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.183 seconds
+[2022-12-16T12:51:03.050+0000] {processor.py:154} INFO - Started process (PID=666) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:51:03.051+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:51:03.054+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:51:03.052+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:51:05.283+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:51:05.283+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-moe_clvm because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:51:06.487+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:51:06.487+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:51:08.892+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:51:08.891+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:51:08.893+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:51:08.920+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 5.876 seconds
+[2022-12-16T12:51:39.011+0000] {processor.py:154} INFO - Started process (PID=730) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:51:39.021+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:51:39.022+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:51:39.022+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:51:39.589+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:51:39.589+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-k5wjn7sh because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:51:39.860+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:51:39.860+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:51:40.729+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:51:40.728+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:51:40.729+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:51:40.746+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.738 seconds
+[2022-12-16T12:52:11.418+0000] {processor.py:154} INFO - Started process (PID=794) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:52:11.418+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:52:11.419+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:52:11.419+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:52:12.027+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:52:12.027+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-y05e1zh4 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:52:12.359+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:52:12.359+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:52:13.268+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:52:13.267+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:52:13.268+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:52:13.287+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.872 seconds
+[2022-12-16T12:52:45.670+0000] {processor.py:154} INFO - Started process (PID=855) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:52:45.671+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:52:45.672+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:52:45.672+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:52:47.276+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:52:47.276+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-uln75hp3 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:52:47.855+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:52:47.855+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:52:49.341+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:52:49.340+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:52:49.342+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:52:49.363+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 3.699 seconds
+[2022-12-16T12:53:19.538+0000] {processor.py:154} INFO - Started process (PID=916) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:53:19.538+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:53:19.539+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:53:19.539+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:53:20.147+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:53:20.147+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-er3zwpbl because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:53:20.425+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:53:20.425+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:53:21.297+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:53:21.296+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:53:21.297+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:53:21.314+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.780 seconds
+[2022-12-16T12:53:51.565+0000] {processor.py:154} INFO - Started process (PID=966) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:53:51.565+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:53:51.566+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:53:51.566+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:53:52.144+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:53:52.143+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-h7irf5hs because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:53:52.454+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:53:52.453+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:53:53.492+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:53:53.491+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:53:53.493+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:53:53.520+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.959 seconds
+[2022-12-16T12:54:24.367+0000] {processor.py:154} INFO - Started process (PID=1028) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:54:24.368+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:54:24.368+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:54:24.368+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:54:24.917+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:54:24.917+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-lntei4tn because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:54:25.197+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:54:25.197+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:54:26.107+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:54:26.106+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:54:26.107+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:54:26.123+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.759 seconds
+[2022-12-16T12:54:56.990+0000] {processor.py:154} INFO - Started process (PID=1089) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:54:56.991+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:54:56.992+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:54:56.992+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:54:57.589+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:54:57.589+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-m8dn2bqc because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:54:57.863+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:54:57.863+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:54:58.881+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:54:58.880+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:54:58.881+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:54:58.899+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.912 seconds
+[2022-12-16T12:55:29.903+0000] {processor.py:154} INFO - Started process (PID=1150) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:55:29.904+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:55:29.905+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:55:29.905+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:55:30.608+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:55:30.608+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-hf0zehp4 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:55:30.917+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:55:30.916+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:55:31.937+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:55:31.936+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:55:31.937+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:55:31.955+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.057 seconds
+[2022-12-16T12:56:03.608+0000] {processor.py:154} INFO - Started process (PID=1213) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:56:03.609+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:56:03.609+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:56:03.609+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:56:04.181+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:56:04.180+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-9fn6w76h because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:56:04.448+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:56:04.447+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:56:05.384+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:56:05.384+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:56:05.385+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:56:05.403+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.797 seconds
+[2022-12-16T12:56:36.778+0000] {processor.py:154} INFO - Started process (PID=1274) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:56:36.779+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:56:36.780+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:56:36.780+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:56:37.366+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:56:37.365+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-uvwq32sn because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:56:37.655+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:56:37.655+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:56:38.636+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:56:38.635+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:56:38.637+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:56:38.655+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.880 seconds
+[2022-12-16T12:57:09.403+0000] {processor.py:154} INFO - Started process (PID=1335) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:57:09.404+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:57:09.404+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:57:09.404+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:57:09.960+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:57:09.959+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-9aipwkp4 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:57:10.232+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:57:10.232+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:57:11.124+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:57:11.123+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:57:11.125+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:57:11.154+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 1.753 seconds
+[2022-12-16T12:57:41.719+0000] {processor.py:154} INFO - Started process (PID=1387) to work on /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:57:41.720+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/predsuperdag.py for tasks to queue
+[2022-12-16T12:57:41.720+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:57:41.720+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:57:42.416+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:57:42.416+0000] {__init__.py:492} WARNING - Matplotlib created a temporary config/cache directory at /tmp/matplotlib-5qk5qzh4 because the default path (/home/airflow/.cache/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[2022-12-16T12:57:42.732+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:57:42.731+0000] {font_manager.py:1443} INFO - generated new fontManager
+[2022-12-16T12:57:43.848+0000] {logging_mixin.py:120} INFO - [2022-12-16T12:57:43.847+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/predsuperdag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/predsuperdag.py", line 83, in <module>
+    python_callable= get_monthly_sales,
+NameError: name 'get_monthly_sales' is not defined
+[2022-12-16T12:57:43.848+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/predsuperdag.py
+[2022-12-16T12:57:43.864+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/predsuperdag.py took 2.149 seconds
